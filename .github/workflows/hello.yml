@@ -1,0 +1,18 @@
+# workflow 
+name : Hello
+
+#we need some action through which our workflow should be triggred 
+on:  
+  workflow_dispatch:
+
+# a workflow can have multiple jobs name that job
+jobs:
+  say-hello:
+    # Temperory container for the job to run  after this job is done container 
+    # will destroy itself
+    runs-on: ubuntu-latest
+    steps:
+        # every job can have multiple steps to run 
+        # it has 2 things name and command to run
+      - name: Say hello to everyone 
+        run: echo "hello merai bhai"
